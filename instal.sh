@@ -5,6 +5,10 @@ read -p "Input domain: " domain
 ServerName=$domain
 ServerPort="80"
 ServerIP="127.0.0.1"
+sudo ufw enable 
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 443
 sudo apt-get update
 sudo apt-get -y upgrade 
 sudo apt-get -y install python3 python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
